@@ -1,0 +1,24 @@
+﻿<Window x:Class="NumberToWordApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NumberToWordApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="80" Width="450" >
+            <Label x:Name="lblValue" Height="40" Width="150" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Content="Enter Number:" /> 
+            <TextBox x:Name="txtNumberValue" Height="40" Width="250" HorizontalAlignment="Left" VerticalAlignment="Bottom" /> 
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Height="80" Width="650" >
+        <Button x:Name="btnResult" Content="Convert To Words"  Height="40" Width="150" HorizontalAlignment="Center" Foreground="Black" VerticalAlignment="Center" Click="btnResult_Click"></Button>
+            <Label x:Name="lblResult" Height="40" Width="650" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black"  Content= "{Binding Path=ResultText, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
+    </Grid>
+</Window>

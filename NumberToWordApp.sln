@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWordApp", "NumberToWordApp\NumberToWordApp.csproj", "{4DCAE756-6FDE-4FB6-85C0-D82D637401D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWordTest", "NumberToWordTest\NumberToWordTest.csproj", "{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DCAE756-6FDE-4FB6-85C0-D82D637401D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCAE756-6FDE-4FB6-85C0-D82D637401D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCAE756-6FDE-4FB6-85C0-D82D637401D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCAE756-6FDE-4FB6-85C0-D82D637401D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8B6876D-7F89-409F-9457-1EB1117FB0F7}
+	EndGlobalSection
+EndGlobal

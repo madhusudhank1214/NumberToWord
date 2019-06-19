@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NumberToText\NumberToText.csproj">
+      <Project>{0AD5021C-210A-4FC1-9F18-21D70E2C3671}</Project>
+      <Name>NumberToText</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NumberToWordTest\NumberToWordTest.csproj">
+      <Project>{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}</Project>
+      <Name>NumberToWordTest</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NumberToText;
+using NumberToWordTest;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -21,11 +23,18 @@ namespace NumberToWordApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region private Variables
+        private NumberToWord objnumberToWord;
+        #endregion
         public MainWindow()
         {
+
             InitializeComponent();
+            objnumberToWord = new NumberToWord();
             DataContext = this;
         }
+        
+        #region Properties
         private string _resultText;
         public string ResultText
         {
@@ -36,8 +45,13 @@ namespace NumberToWordApp
                 OnPropertyChanged("ResultText");
             }
         }
+        #endregion
+        
+        #region Events
         public event PropertyChangedEventHandler PropertyChanged;
-
+        #endregion
+        
+        #region private Methods
         private void OnPropertyChanged(string prop)
         {
             PropertyChangedEventHandler handler = this.PropertyChanged;
@@ -58,7 +72,7 @@ namespace NumberToWordApp
                 if (!string.IsNullOrEmpty(txtNumberValue.Text))
                 {
                     _givenNumber = Convert.ToInt32(txtNumberValue.Text);
-                    var resultWord = NumberToWords(_givenNumber);
+                    var resultWord = objnumberToWord.NumberToWords(_givenNumber);
                     ResultText = resultWord;
                     lblResult.Content = resultWord;
                 }
@@ -75,61 +89,6 @@ namespace NumberToWordApp
             }
            
         }
-        public static string NumberToWords(int number)
-        {
-            string words = "";
-
-            try
-            {
-                if (number == 0)
-                    return "zero";
-
-                if (number < 0)
-                    return "minus " + NumberToWords(Math.Abs(number));
-
-
-                if ((number / 1000000) > 0)
-                {
-                    words += NumberToWords(number / 1000000) + " million ";
-                    number %= 1000000;
-                }
-
-                if ((number / 1000) > 0)
-                {
-                    words += NumberToWords(number / 1000) + " thousand ";
-                    number %= 1000;
-                }
-
-                if ((number / 100) > 0)
-                {
-                    words += NumberToWords(number / 100) + " hundred ";
-                    number %= 100;
-                }
-
-                if (number > 0)
-                {
-                    if (words != "")
-                        words += "and ";
-
-                    var unitsMap = new[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-                    var tensMap = new[] { "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
-
-                    if (number < 20)
-                        words += unitsMap[number];
-                    else
-                    {
-                        words += tensMap[number / 10];
-                        if ((number % 10) > 0)
-                            words += "-" + unitsMap[number % 10];
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return words;
-            }
-            return words;
-        }
+        #endregion
     }
 }

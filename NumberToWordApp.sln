@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWordApp", "NumberTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToWordTest", "NumberToWordTest\NumberToWordTest.csproj", "{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToText", "NumberToText\NumberToText.csproj", "{0AD5021C-210A-4FC1-9F18-21D70E2C3671}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D8B73A-CBB7-424C-8F4A-1ACE1E84B8C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD5021C-210A-4FC1-9F18-21D70E2C3671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD5021C-210A-4FC1-9F18-21D70E2C3671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD5021C-210A-4FC1-9F18-21D70E2C3671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD5021C-210A-4FC1-9F18-21D70E2C3671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
